@@ -427,3 +427,18 @@ form.solo { box-shadow: 0 30px 70px -40px rgba(80,10,20,.45); }
 .hero-logo { width: min(100%, 420px); height: auto; filter: drop-shadow(0 30px 40px rgba(125,11,30,.25)); animation: floaty 6s ease-in-out infinite; }
 
 .card .tag { justify-self: start; font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; padding: 4px 10px; border-radius: 999px; background: var(--grad); color: #fff; }
+
+/* team */
+.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.member { background: #fff; border: 1px solid var(--line); border-radius: 24px; padding: 32px; text-align: center; transition: transform .25s ease, box-shadow .25s ease, border-color .25s; }
+.member:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -22px rgba(80,10,20,.4); border-color: rgba(163,18,42,.45); }
+.member .avatar { width: 80px; height: 80px; margin: 0 auto; border-radius: 50%; background: var(--grad); color: #fff; display: grid; place-items: center; font-family: var(--display); font-size: 26px; font-weight: 600; box-shadow: 0 12px 24px -12px rgba(184,20,47,.7); }
+.member h3 { margin-top: 18px; font-size: 20px; }
+.member p { margin-top: 4px; color: var(--muted); font-size: 14.5px; }
+.team-cta { margin-top: 56px; border-radius: 32px; padding: clamp(36px, 6vw, 56px); text-align: center; color: #fff; background: radial-gradient(700px 400px at 0% 0%, rgba(255,255,255,.12), transparent 60%), linear-gradient(135deg, #8f0e24, #b8142f 60%, #7d0b1e); }
+.team-cta h2 { color: #fff; }
+.team-cta p { color: rgba(255,255,255,.85); margin: 12px auto 0; max-width: 46ch; }
+.team-cta .btn-primary { background: #fff; color: #a3122a; }
+.team-cta .btn-ghost { color: #fff; border-color: rgba(255,255,255,.45); }
+@media (max-width: 900px) { .team-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .team-grid { grid-template-columns: 1fr; } }

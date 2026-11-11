@@ -18,6 +18,7 @@ Plain static HTML, CSS and JS. No build step, no framework.
 | Free trial form | `free-trial.html` |
 | Demo line | `demo.html` |
 | About | `about.html` |
+| Team | `team.html` |
 | Contact form | `contact.html` |
 | Thank you (after a form) | `thank-you.html` |
 | Privacy / Terms | `privacy.html`, `terms.html` |
