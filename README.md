@@ -21,6 +21,7 @@ Plain static HTML, CSS and JS. No build step, no framework.
 | Team | `team.html` |
 | Contact form | `contact.html` |
 | Thank you (after a form) | `thank-you.html` |
+| Log in (sends customers to the portal; set `PORTAL_LOGIN_URL` inside) | `login.html` |
 | Privacy / Terms | `privacy.html`, `terms.html` |
 | Not found | `404.html` |
 

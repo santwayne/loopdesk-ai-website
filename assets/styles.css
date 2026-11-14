@@ -442,3 +442,6 @@ form.solo { box-shadow: 0 30px 70px -40px rgba(80,10,20,.45); }
 .team-cta .btn-ghost { color: #fff; border-color: rgba(255,255,255,.45); }
 @media (max-width: 900px) { .team-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .team-grid { grid-template-columns: 1fr; } }
+
+/* Log in link (nav) */
+.nav-links .mobile-login a { background: transparent; color: var(--fg); border: 1px solid var(--line); }
