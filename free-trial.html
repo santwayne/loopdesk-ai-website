@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Start your free trial · Loopdesk AI</title>
+<title>Sign up · Loopdesk AI</title>
 <meta name="description" content="Tell us about your business and we'll set up Loopdesk AI free for 14 days. No card needed.">
 <meta property="og:title" content="Start your free trial · Loopdesk AI">
 <meta property="og:description" content="Tell us about your business and we'll set up Loopdesk AI free for 14 days. No card needed.">
@@ -33,43 +33,24 @@
   </div>
 </nav>
 <main id="main">
-<section class="trial" id="trial">
-  <div class="wrap">
-    <div>
-      <div class="eyebrow">Free for 14 days</div>
-      <h1 style="margin-top:12px;font-size:clamp(34px,5vw,54px)">Start your 14&#8209;day free trial</h1>
-      <p class="lede" style="margin-top:14px">Tell us about your business and we'll call you back within one business day. Want to hear it first? <a href="demo.html" style="color:#fff">Try the demo line</a>.</p>
-      <ol class="steps">
-        <li><span class="k">1</span><span><b>We call you back within one business day</b>15 minutes: your services, prices, hours and how you like bookings.</span></li>
-        <li><span class="k">2</span><span><b>Everything goes live in one account</b>Forward your existing number when you're busy or closed. Your inbox, CRM and Google profile are connected for you. Nothing to install.</span></li>
-        <li><span class="k">3</span><span><b>Get your first morning plan the next day</b>See every call, text and win for 14 days. Keep it, change plans or cancel. No charge during the trial.</span></li>
-      </ol>
-    </div>
-
-    <form id="trial-form" class="solo" data-lead="trial" novalidate>
-      <div class="f"><label for="biz">Business name <span class="req">*</span></label><input id="biz" name="business" required autocomplete="organization" placeholder="Maple HVAC"></div>
-      <div class="f"><label for="name">Your name <span class="req">*</span></label><input id="name" name="name" required autocomplete="name"></div>
-      <div class="f"><label for="phone">Mobile number <span class="req">*</span></label><input id="phone" name="phone" required type="tel" autocomplete="tel" placeholder="+1 416 555 0123"></div>
-      <div class="f"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
-      <div class="f"><label for="trade">Type of business</label>
-        <select id="trade" name="trade">
-          <option>HVAC / plumbing / trades</option><option>Salon / spa / beauty</option><option>Dental / physio / clinic</option>
-          <option>Realtor / mortgage / legal</option><option>Restaurant</option><option>Other</option>
-        </select></div>
-      <div class="f"><label for="city">City &amp; province</label><input id="city" name="city" autocomplete="address-level2" placeholder="Brampton, ON"></div>
-      <div class="f"><label for="calls">Calls on a busy day</label>
-        <select id="calls" name="calls"><option>Under 10</option><option selected>10–30</option><option>30–60</option><option>60+</option></select></div>
-      <div class="f"><label for="plan">Plan you're interested in</label>
-        <select id="plan" name="plan"><option value="ANSWER">Answer · C$149</option><option value="ANSWER_RETURN" selected>Answer + Return · C$249</option><option value="GROW">Grow · C$549</option><option value="UNSURE">Not sure yet</option></select></div>
-      <div class="f full"><label for="notes">Anything we should know? (optional)</label><textarea id="notes" name="notes" placeholder="e.g. we miss calls on Saturdays, we want Punjabi support"></textarea></div>
-      <div class="form-foot">
-        <button class="btn btn-primary" type="submit" id="submit">Request my free trial</button>
-        <p>We'll only use your details to set up your trial. No card needed.</p>
-      </div>
-      <div class="msg" id="form-msg" hidden></div>
-    </form>
-  </div>
-</section>
+<section class="page-hero"><div class="wrap"><div class="notice"><h1 style="font-size:clamp(30px,4vw,44px)">Start with Loopdesk AI</h1><p class="lede" id="signup-text" style="margin-top:12px">Taking you to sign up…</p><div class="hero-ctas"><a class="btn btn-primary" id="signup-go" href="contact.html">Create my account</a><a class="btn btn-ghost" href="demo.html">Hear the demo line</a></div></div></div></section>
+<script>
+  // One signup for the website and the app: every "Start free trial" and pricing
+  // button comes here and goes on to the app's signup, keeping the chosen plan
+  // (?plan=GROW, ?plan=bundle:<id> or ?bundle=<id>). Change the address here only.
+  var SIGNUP_URL = "https://app.loopdeskai.wayneesolutions.com/signup";
+  (function () {
+    var go = document.getElementById("signup-go");
+    if (!SIGNUP_URL) { document.getElementById("signup-text").textContent = "Sign up is opening soon. Contact us and we'll set you up."; go.textContent = "Contact us"; return; }
+    var q = new URLSearchParams(location.search), out = new URLSearchParams();
+    var plan = q.get("plan"), bundle = q.get("bundle"), country = q.get("country");
+    if (bundle) out.set("bundle", bundle); else if (plan && plan !== "UNSURE") out.set("plan", plan);
+    out.set("country", country || "CA");
+    var url = SIGNUP_URL + "?" + out.toString() + (location.hash || "");
+    go.href = url;
+    location.replace(url);
+  })();
+</script>
 </main>
 <footer>
   <div class="wrap">
