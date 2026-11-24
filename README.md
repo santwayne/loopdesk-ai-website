@@ -15,7 +15,7 @@ Plain static HTML, CSS and JS. No build step, no framework.
 | Pricing | `pricing.html` |
 | Industries | `industries.html` |
 | FAQ | `faq.html` |
-| Free trial form | `free-trial.html` |
+| Sign up (sends to the app's `/signup`, keeping the chosen plan; set `SIGNUP_URL` inside) | `free-trial.html` |
 | Demo line | `demo.html` |
 | About | `about.html` |
 | Team | `team.html` |
